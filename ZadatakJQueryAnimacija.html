@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Animate</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$("button").click(function(){
+					$("div").animate({left: 500}, 1000);});
+				
+				$("div.first").click(function(){
+					$("div.first div").animate({borderRadius:"80px"});
+				});
+				
+				$("div.third").mouseover(function(){
+					$("div.third div").css("background-color","FFDD13");}).mouseout(function(){
+					$("div.third div").css("background-color","#006400");
+				});
+			});
+		</script>
+		<style>
+			div {position: relative;}
+		</style>
+	</head>
+	
+	<body>
+		<span><button>Click</button></span><br>
+	  
+		<div class="first">
+			<div style="background:#006400; height:100px; width:100px;"></div>
+		</div><br>
+		
+		<div class="second">
+			<div style="background:#006400; height:100px; width:100px;"></div>
+		</div><br>
+		
+		<div class="third">
+			<div style="background:#006400; height:100px; width:100px;"></div>
+		</div><br>
+		
+		<div class="fourth">
+			<div style="background:#006400; height:100px; width:100px;"></div>
+		</div>
+	</body>
+</html>
